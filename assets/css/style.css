@@ -1,6 +1,6 @@
 @charset "UTF8";
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap');
 
 :root {
     /*Primary*/
@@ -72,26 +72,28 @@ img#logo {
     display: block;
     color: var(--White);
     position: absolute;
-    margin-inline: 1rem;
+    font-family: var(--family);
+    margin-left: 1.2rem;
 }
 
 .snumber {
     font-size: 1rem;
-    font-weight: 500;
     letter-spacing: 0.12rem;
-    top: 8.3rem;    
+    top: 8rem;    
 }
-.sname, .sexp {
-    font-size: 0.8rem;
+.sname, .sexp, .scvc {
+    font-size: 0.5rem;
+    font-weight: 300;
+    letter-spacing: 0.08rem;
 }
 
 .sexp {
-    right: 6rem;
+    right: 7rem;
 }
 
 .scvc {
-    top: 4.1rem;
-    right: 1rem;
+    top: 4.6rem;
+    right: 2rem;
 }
 
 .error-msg {
@@ -204,4 +206,77 @@ h4 {
     font-size: 0.8rem;
 }
 
-
+@media screen and (min-width: 1200px){
+    body {
+         display:grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+         height: 100vh
+        
+     }
+     header {
+         grid-area: 1 / 1 / span 3 / span 2;
+         background: url("../images/bg-main-desktop.png") 
+     }
+     #card-back > img, #card-front >img  {
+         width: 25%;
+         margin: 1rem;
+     }
+ 
+     #card-front >img {
+         left:11rem;
+         top: 8rem;
+     }
+ 
+     img#logo {
+         width: 3.5rem;
+         top: 9rem;
+         left: 12rem;
+     }
+ 
+     #card-back > img {
+         position: absolute;
+         top: 19rem;
+         left: 15rem;
+     }
+        
+     .snumber {
+         top: 14rem;
+         left: 12rem;
+         font-size: 1.15rem;
+         letter-spacing: 0.14rem;
+     }
+     .sname, .sexp {
+         top: 17rem;
+         font-size: 0.8rem;
+     }
+ 
+     .sname {
+         left: 12rem;
+     }
+     
+     .sexp {
+         left: 24.5rem;
+         right: 0;
+     }
+     
+     .scvc {
+         top: 24.3rem;
+         right: 39.5rem;
+         font-size: 0.8rem;
+         
+     }
+     
+ 
+     main {
+         grid-area: 2 / 4 / span 1 / span 2;
+         
+     }
+ 
+     footer {
+         grid-area: 3 / 4 / span 1 / span 2;
+         display: flex;
+         align-items: flex-end;
+         margin-bottom: 1rem;
+     }
+        
+ } 
