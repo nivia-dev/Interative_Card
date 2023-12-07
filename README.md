@@ -1,6 +1,8 @@
 # Interative_Card
- 
-## Desafio Frontend Mentor
-## Proposto no cursos Descodificadas
+## Frontend Mentor | Challenges
+<br>
 
-### Projeto em construção
+## Course Activity -  Descodificadas
+<br>
+
+## https://nivia-dev.github.io/Interative_Card/
