@@ -104,7 +104,7 @@ img#logo {
 form {
     display: flex;
     flex-direction: column;
-    padding: 3rem 1rem;
+    padding: 3rem 2rem;
     font-size: 0.8rem;
     line-height: 2rem;
 }
@@ -217,8 +217,9 @@ h4 {
          grid-area: 1 / 1 / span 3 / span 2;
          background: url("../images/bg-main-desktop.png") 
      }
+
      #card-back > img, #card-front >img  {
-         width: 25%;
+         width: 28%;
          margin: 1rem;
      }
  
@@ -235,7 +236,7 @@ h4 {
  
      #card-back > img {
          position: absolute;
-         top: 19rem;
+         top: 20rem;
          left: 15rem;
      }
         
@@ -255,22 +256,29 @@ h4 {
      }
      
      .sexp {
-         left: 24.5rem;
+         left: 25rem;
          right: 0;
      }
      
      .scvc {
-         top: 24.3rem;
-         right: 39.5rem;
+         top: 25.8rem;
+         right: 38rem;
          font-size: 0.8rem;
          
      }
      
  
      main {
-         grid-area: 2 / 4 / span 1 / span 2;
-         
+         grid-area: 2 / 4 / span 1 / span 2;    
      }
+
+     #iform, .complete {
+         margin-left: 2rem;
+     }
+
+     .complete >img {
+        width: 5vw;
+    }
  
      footer {
          grid-area: 3 / 4 / span 1 / span 2;
