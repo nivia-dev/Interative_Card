@@ -71,7 +71,7 @@ function validDate() {
     } else if(imonth.value < 1 || imonth.value > 12) {
         error_date.innerHTML = 'Invalid Month'
         return false
-    } else if (imonth.value < currentMonth || iyear.value < currentYear){
+    } else if (imonth.value < currentMonth && iyear.value <= currentYear){
         error_date.innerHTML = 'Expired Card'
         return false
     }
@@ -83,10 +83,10 @@ function validDate() {
 
 function validNumber () {
     var error_number = document.querySelector('.error-number')
-    if(inumber.value === '') {
+    if(inumber.value == '') {
         error_number.innerHTML = 'This Field is required'
         return false
-    } else if (inumber.value.length < 17){
+    } else if (inumber.value.length < 19){
         error_number.innerHTML = 'Invalid Number Card'
         return false
     }
@@ -101,9 +101,13 @@ function validCvc() {
     if (icvc.value === '') {
     error_cvc.innerHTML = 'This Field is required'
     return false
-    } else {
-    error_cvc.innerHTML = ''
-    return true
+    } else if (icvc.value.length < 3){
+        error_cvc.innerHTML = 'Invalid Code'
+        return false
+    }
+        else {
+        error_cvc.innerHTML = ''
+        return true
     }
 }
 
@@ -111,8 +115,8 @@ function checkForm(e){
     e.preventDefault()
     if (
     validName() &&
-    validDate() &&
     validNumber() &&
+    validDate() &&
     validCvc()
     ) {
         iform.style.display = 'none';

@@ -77,8 +77,8 @@ img#logo {
 }
 
 .snumber {
-    font-size: 1rem;
-    letter-spacing: 0.12rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.10rem;
     top: 8rem;    
 }
 .sname, .sexp, .scvc {
